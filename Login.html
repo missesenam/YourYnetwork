@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wht: '#ffffff',
+            blk: '#000000',
+            primary10: '#003b6d',
+            primary20: '#6699cc',
+            primary30: '#ebedf3',
+            primary40: '#BDBDBD',
+            primary50: '#676767',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-primary10">
+    <h1 class="my-5 text-5xl  text-wht capitalize font-bold text-center">login in your account</h1>
+    <main class="flex justify-center items-center">
+        <div class="w-[600px] bg-primary30 p-5 my-5">
+            <form action="">
+                <h1 class="font-bold text-5xl capitalize text-primary10 text-center">login</h1>
+                    <div class="my-5">
+                        <label for="fullName" class="block capitalize text-2xl font-bold text-primary50 mb-3">full name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="write your full name" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40">
+                    </div>
+                    <div class="mb-5">
+                        <label for="fullName" class="block capitalize text-2xl font-bold text-primary50 mb-3">last name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="write your last name" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40">
+                    </div>
+                    <div class="mb-5">
+                        <label for="Email" class="block capitalize text-2xl font-bold text-primary50 mb-3">enter your email</label>
+                        <input type="text" id="Email" name="Email" placeholder="write your Email" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40">
+                    </div>
+                    <div class="text-center mt-8 mb-6">
+                        <button class="py-2 px-5 bg-primary10 text-primary30 rounded-md">Login</button>
+                    </div>
+                    <p class="text-center">don't have an account yet <a href="JoinUS.html" class="text-primary20">Sign Up</a> here</p>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

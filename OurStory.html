@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wht: '#ffffff',
+            blk: '#000000',
+            primary10: '#003b6d',
+            primary20: '#6699cc',
+            primary30: '#ebedf3',
+            primary40: '#BDBDBD',
+            primary50: '#676767',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="">
+  <header >
+    <!-- navigation bar -->
+    <nav class="z-[1000] fixed w-screen bg-primary10">
+      <div class="flex justify-between items-center px-6 py-2 h-16">
+        <!-- logo section -->
+        <div class="flex items-center">
+          <a href="#">
+            <img src="./img/logo.webp" alt="your network logo" width="50px">
+          </a>
+        </div>
+        <!-- links -->
+        <div class="flex space-x-4">
+          <a class="text-primary30 hover:text-primary40" href="index.html">Home</a>
+          <a class="text-primary30 hover:text-primary40" href="AboutUs.html">About</a>
+          <a class="text-primary30 hover:text-primary40" href="ContactUs.html">Contact</a>
+          <a class="text-primary30 hover:text-primary40" href="Services.html">Services</a>
+          <a class="text-primary30 hover:text-primary40" href="Events.html">Events</a>
+        </div>
+        <div class="flex space-x-4">
+          <a class="text-primary30 hover:text-primary40" href="Login.html">Login</a>
+          <a class="text-primary30 hover:text-primary40" href="JoinUS.html">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+    <!-- hero section -->
+     <div class="bg-[url('img/hero.webp')] pt-16 h-screen bg-cover bg-center bg-black bg-opacity-60 bg-blend-darken relative flex justify-center items-center">
+      <div class="text-primary30 absolute text-center px-[20%]">
+        <h1 class="text-5xl font-bold mb-10">We are an Inclusive Global Community of Social Entrepreneurs and Changemakers.</h1>
+        <a href="JoinUS.html" class="bg-primary10 py-2 px-4 rounded hover:bg-primary20">Join US</a>
+      </div>
+     </div>
+  </header>
+  <main>
+    <section class="w-4/6 mx-auto my-10">
+        <div class="grid grid-cols-2 gap-[20px] mb-[80px]">
+            <div class="imgsrc">
+                <img src="./img/grouppicture.jpg" alt="group picture" class="w-[100%] rounded-[10px]">
+            </div>
+            <div>
+                <h1 class="text-3xl mb-5 text-primary10">about yourYnetwork</h1>
+                <p class="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consectetur.</p>
+                <p class="my-[20px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, inventore. Quis voluptate beatae blanditiis exercitationem obcaecati minima sint nostrum provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="w-3/5 mx-auto mb-10">
+        <h1 class="text-5xl mb-5 text-primary10">founder stories</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur impedit, dolorem dolores iusto doloribus veritatis accusantium unde molestias nobis, dignissimos tempora deleniti ab architecto fuga nulla aliquam eaque! Officia aliquam, saepe inventore unde fugiat voluptas perspiciatis ducimus alias id eligendi laudantium corporis minima repellat pariatur reiciendis impedit maxime nostrum consequatur ex quasi! Nostrum ex totam quasi aperiam praesentium nobis, quos mollitia vitae ipsam debitis, dolore iusto doloremque velit non dolores amet culpa hic eum. Quibusdam recusandae nam inventore hic iure at sequi, illo, libero nostrum, ex dolor aliquid itaque eaque tempore amet. Perferendis vel reiciendis voluptates aliquam eveniet nisi!</p>
+    </section>
+    <section class="w-3/5 mx-auto mb-10">
+        <h1 class="text-5xl mb-5 text-primary10">Lorem ipsum dolor.</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur impedit, dolorem dolores iusto doloribus veritatis accusantium unde molestias nobis, dignissimos tempora deleniti ab architecto fuga nulla aliquam eaque! Officia aliquam, saepe inventore unde fugiat voluptas perspiciatis ducimus alias id eligendi laudantium corporis minima repellat pariatur reiciendis impedit maxime nostrum consequatur ex quasi! Nostrum ex totam quasi aperiam praesentium nobis, quos mollitia vitae ipsam debitis, dolore iusto doloremque velit non dolores amet culpa hic eum. Quibusdam recusandae nam inventore hic iure at sequi, illo, libero nostrum, ex dolor aliquid itaque eaque tempore amet. Perferendis vel reiciendis voluptates aliquam eveniet nisi!</p>
+    </section>
+    <section class="w-4/5 mx-auto">
+        <img src="./img/shake.jpg" alt="people shaking hand">
+    </section>
+    <section class="w-3/6 mx-auto my-10">
+        <h1 class="text-5xl mb-5 text-primary10">Lorem ipsum dolor.</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur impedit, dolorem dolores iusto doloribus veritatis accusantium unde molestias nobis, dignissimos tempora deleniti ab architecto fuga nulla aliquam eaque! Officia aliquam, saepe inventore unde fugiat voluptas perspiciatis ducimus alias id eligendi laudantium corporis minima repellat pariatur reiciendis impedit maxime nostrum consequatur ex quasi! Nostrum ex totam quasi aperiam praesentium nobis, quos mollitia vitae ipsam debitis, dolore iusto doloremque velit non dolores amet culpa hic eum. Quibusdam recusandae nam inventore hic iure at sequi, illo, libero nostrum, ex dolor aliquid itaque eaque tempore amet. Perferendis vel reiciendis voluptates aliquam eveniet nisi!</p>
+    </section>
+    <section class="w-3/5 mx-auto mb-10">
+        <h1 class="text-5xl mb-5 text-primary10">Lorem ipsum dolor.</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur impedit, dolorem dolores iusto doloribus veritatis accusantium unde molestias nobis, dignissimos tempora deleniti ab architecto fuga nulla aliquam eaque! Officia aliquam, saepe inventore unde fugiat voluptas perspiciatis ducimus alias id eligendi laudantium corporis minima repellat pariatur reiciendis impedit maxime nostrum consequatur ex quasi! Nostrum ex totam quasi aperiam praesentium nobis, quos mollitia vitae ipsam debitis, dolore iusto doloremque velit non dolores amet culpa hic eum. Quibusdam recusandae nam inventore hic iure at sequi, illo, libero nostrum, ex dolor aliquid itaque eaque tempore amet. Perferendis vel reiciendis voluptates aliquam eveniet nisi!</p>
+    </section>
+  </main>
+
+<footer class="border-t-2 border-primary40 mt-[200px] bg-primary10 text-primary30"></footer>
+    <div class="grid grid-cols-12 py-[30px] mx-[40px] items-center">
+      <div class="col-span-3">
+          <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">our social medias</h3>
+          <div class="flex w-[45%]">
+              <a href="https://x.com/home"><img src="./icon/twitter-154-svgrepo-com.svg" alt="twitter icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://www.instagram.com/"><img src="./icon/instagram-svgrepo-com.svg" alt="instagram icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://web.facebook.com/"><img src="./icon/facebook-176-svgrepo-com.svg" alt="facebook icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://www.tiktok.com/login"><img src="./icon/tiktok-svgrepo-com.svg" alt="tiktok icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+          </div>
+      </div>
+      <div class="col-span-6">
+          <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">support</h3>
+          <ul class="flex">
+              <li class="mr-[30px]">Privacy Policy</li>
+              <li class="mr-[30px]">Terms & Conditions</li>
+              <li class="mr-[30px]">FAQs</li>
+              <li class="mr-[30px]">About Us</li>
+          </ul>
+      </div>
+      <div class="col-span-3">
+        <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">HR company</h3>
+          <p> &copy; yourNetwork </p>
+      </div>
+  </div>
+  </footer>
+</body>
+</html>

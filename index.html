@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wht: '#ffffff',
+            blk: '#000000',
+            primary10: '#003b6d',
+            primary20: '#6699cc',
+            primary30: '#ebedf3',
+            primary40: '#BDBDBD',
+            primary50: '#676767',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="">
+  <header >
+    <!-- navigation bar -->
+    <nav class="z-[1000] fixed w-screen bg-primary10">
+      <div class="flex justify-between items-center px-6 py-2 h-16">
+        <!-- logo section -->
+        <div class="flex items-center">
+          <a href="#">
+            <img src="./img/logo.webp" alt="your network logo" width="50px">
+          </a>
+        </div>
+        <!-- links -->
+        <div class="flex space-x-4">
+          <a class="text-primary30 hover:text-primary40" href="index.html">Home</a>
+          <a class="text-primary30 hover:text-primary40" href="AboutUs.html">About</a>
+          <a class="text-primary30 hover:text-primary40" href="ContactUs.html">Contact</a>
+          <a class="text-primary30 hover:text-primary40" href="Services.html">Services</a>
+          <a class="text-primary30 hover:text-primary40" href="Events.html">Events</a>
+          <a class="text-primary30 hover:text-primary40" href="#testimonials">Testimonials</a>
+        </div>
+        <div class="flex space-x-4">
+          <a class="text-primary30 hover:text-primary40" href="Login.html">Login</a>
+          <a class="text-primary30 hover:text-primary40" href="JoinUS.html">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+    <!-- hero section -->
+     <div class="bg-[url('img/hero.webp')] pt-16 h-screen bg-cover bg-center bg-black bg-opacity-60 bg-blend-darken relative flex justify-center items-center">
+      <div class="text-primary30 absolute text-center px-[20%]">
+        <h1 class="text-5xl font-bold mb-10">We are an Inclusive Global Community of Social Entrepreneurs and Changemakers.</h1>
+        <a href="JoinUS.html" class="bg-primary10 text-wht py-2 px-4 rounded hover:bg-primary20">Join US</a>
+      </div>
+     </div>
+  </header>
+  <main>
+    <!-- intro -->
+     <section class="my-20 ml-5">
+      <div class="grid grid-cols-2 gap-[20px] mb-[80px] w-4/5">
+        <div class="imgsrc">
+          <img src="./img/trust.jpg" alt="group picture" class="w-[100%] shadow-2xl rounded-tr-[30px] rounded-bl-[30px]">
+      </div>
+        <div>
+            <h1 class="text-6xl mb-5 text-primary10 capitalize">we are youYnetwork</h1>
+            <p class="font-bold text-primary50 text-xl">we help you: <span class="text-blk text-3xl">Hire Right</span></p>
+            <p class="my-[20px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, inventore. Quis voluptate beatae blanditiis exercitationem obcaecati minima sint nostrum provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis.
+            </p>
+        </div>
+    </div>
+      <div class="grid grid-cols-2 gap-[20px] mb-[80px] w-4/5 ml-auto mr-5">
+        <div>
+            <h1 class="text-6xl mb-5 text-primary10">Our Match Your Trusted Talent Bridge</h1>
+            <p class="font-bold">Our commitment to fostering enduring connections between talented individuals and thriving businesses ensures mutual success and growth.</p>
+            <p class="my-[20px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, inventore. Quis voluptate beatae blanditiis exercitationem obcaecati minima sint nostrum provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis.
+            </p>
+        </div>
+        <div class="imgsrc">
+            <img src="./img/match.jpg" alt="group picture" class="w-[100%] shadow-2xl rounded-tr-[30px] rounded-bl-[30px]">
+        </div>
+      </div>
+     </section>
+     <!-- our people -->
+     <section class="w-5/6 mx-auto mb-10">
+      <h1 class="font-bold text-4xl mb-5 text-center uppercase">our people</h1>
+      <article class="grid grid-cols-4 gap-10 p-5">
+        <div class="p-5 shadow-sm border rounded-tl-[20px] rounded-br-[20px]">
+          <div class="flex mb-5 gap-5">
+            <div class="w-[50%]">
+              <img src="./img/man2.jpg" alt="a man's picture" class="rounded-[50%]">
+            </div>
+            <div class="w-[50%]">
+              <h1 class="font-bold capitalize">william cobines</h1>
+              <p>CEO</p>
+            </div>
+          </div>
+          <div class="ml-5 flex space-x-3">
+            <a href=""><img src="./icon/linkedin-svgrepo-com.svg" alt="linkedin-svgrepo-com" width="30px"></a>
+            <a href=""><img src="./icon/mail-svgrepo-com.svg" alt="mail" width="30px"></a>
+          </div>
+        </div>
+        <div class="p-5 shadow-sm border rounded-tl-[20px] rounded-br-[20px]">
+          <div class="flex mb-5 gap-5">
+            <div class="w-[50%]">
+              <img src="./img/man2.jpg" alt="a man's picture" class="rounded-[50%]">
+            </div>
+            <div class="w-[50%]">
+              <h1 class="font-bold capitalize">william cobines</h1>
+              <p>CEO</p>
+            </div>
+          </div>
+          <div class="ml-5 flex space-x-3">
+            <a href=""><img src="./icon/linkedin-svgrepo-com.svg" alt="linkedin-svgrepo-com" width="30px"></a>
+            <a href=""><img src="./icon/mail-svgrepo-com.svg" alt="mail" width="30px"></a>
+          </div>
+        </div>
+        <div class="p-5 shadow-sm border rounded-tl-[20px] rounded-br-[20px]">
+          <div class="flex mb-5 gap-5">
+            <div class="w-[50%]">
+              <img src="./img/man2.jpg" alt="a man's picture" class="rounded-[50%]">
+            </div>
+            <div class="w-[50%]">
+              <h1 class="font-bold capitalize">william cobines</h1>
+              <p>CEO</p>
+            </div>
+          </div>
+          <div class="ml-5 flex space-x-3">
+            <a href=""><img src="./icon/linkedin-svgrepo-com.svg" alt="linkedin-svgrepo-com" width="30px"></a>
+            <a href=""><img src="./icon/mail-svgrepo-com.svg" alt="mail" width="30px"></a>
+          </div>
+        </div>
+        <div class="p-5 shadow-sm border rounded-tl-[20px] rounded-br-[20px]">
+          <div class="flex mb-5 gap-5">
+            <div class="w-[50%]">
+              <img src="./img/man2.jpg" alt="a man's picture" class="rounded-[50%]">
+            </div>
+            <div class="w-[50%]">
+              <h1 class="font-bold capitalize">william cobines</h1>
+              <p>CEO</p>
+            </div>
+          </div>
+          <div class="ml-5 flex space-x-3">
+            <a href=""><img src="./icon/linkedin-svgrepo-com.svg" alt="linkedin-svgrepo-com" width="30px"></a>
+            <a href=""><img src="./icon/mail-svgrepo-com.svg" alt="mail" width="30px"></a>
+          </div>
+        </div>
+      </article>
+     </section>
+     <!-- seeking for a a talent -->
+     <section class="w-4/5 mx-auto mb-10">
+      <h1 class="font-bold text-3xl mb-5 text-center uppercase mb-8">seeking for a talent?</h1>
+      <article class="grid grid-cols-3 gap-10 bg-primary30 p-5">
+        <div>
+          <div class="flex space-x-3">
+            <img src="./icon/clock-twelve-thirty-svgrepo-com.svg" alt="clock" width="30px">
+            <h3 class="font-bold capitalize">part time</h3>
+          </div>
+          <p class="text-primary50 my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a nam fuga veritatis nemo laboriosam commodi ipsa vel mollitia numquam suscipit.</p>
+          <a href="" class="uppercase text-primary20">more</a>
+        </div>
+        <div>
+          <div class="flex space-x-3">
+            <img src="./icon/clock-three-svgrepo-com.svg" alt="clock" width="30px">
+            <h3 class="font-bold capitalize">full time</h3>
+          </div>
+          <p class="text-primary50 my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a nam fuga veritatis nemo laboriosam commodi ipsa vel mollitia numquam suscipit.</p>
+          <a href="" class="uppercase text-primary20">more</a>
+        </div>
+        <div>
+          <div class="flex space-x-3">
+            <img src="./icon/hourglass-start-solid-svgrepo-com.svg" alt="clock" width="30px">
+            <h3 class="font-bold capitalize">interim</h3>
+          </div>
+          <p class="text-primary50 my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a nam fuga veritatis nemo laboriosam commodi ipsa vel mollitia numquam suscipit.</p>
+          <a href="" class="uppercase text-primary20">more</a>
+        </div>
+      </article>
+     </section>
+     <!-- more -->
+      <section class="bg-primary10 flex  text-wht h-[300px] items-center px-10 mb-10 mt-20">
+        <h1 class="text-7xl ml-auto font-bold w-[30%]">Hire Fast Your Talent</h1>
+        <p class="w-[50%] ml-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi expedita nam quas, quae a dicta vitae soluta et omnis consequatur. Dolore magnam ullam temporibus eos consequatur necessitatibus quas adipisci? Aut inventore magnam fugiat dicta in repellendus, praesentium eos veniam minus sapiente necessitatibus velit quos! Hic fuga excepturi error dolorum reprehenderit.</p>
+      </section>
+    <!-- seekng for a job -->
+    <section class="w-4/5 mx-auto mb-10 shadow-sm shadow-primary20 p-6 mt-20">
+      <h1 class="font-bold text-3xl mb-5 capitalize">seeking for a job?</h1>
+      <article class="grid grid-cols-3  p-5">
+        <div>
+          <div class="flex space-x-3">
+            <img src="./icon/register-svgrepo-com.svg" alt="clock" width="30px">
+            <h3 class="font-bold capitalize text-primary10">register to join us</h3>
+          </div>
+          <p class="text-primary50 my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a nam fuga veritatis nemo laboriosam commodi ipsa vel mollitia numquam suscipit.</p>
+        </div>
+        <div class="border-x-4 border-primary20 px-4">
+          <div class="flex space-x-3">
+            <img src="./icon/search-svgrepo-com.svg" alt="clock" width="30px">
+            <h3 class="font-bold capitalize text-primary10">search for jobs</h3>
+          </div>
+          <p class="text-primary50 my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a nam fuga veritatis nemo laboriosam commodi ipsa vel mollitia numquam suscipit.</p>
+        </div>
+        <div class="pl-4">
+          <div class="flex space-x-3">
+            <img src="./icon/application-form-svgrepo-com.svg" alt="clock" width="30px">
+            <h3 class="font-bold capitalize text-primary10">apply</h3>
+          </div>
+          <p class="text-primary50 my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a nam fuga veritatis nemo laboriosam commodi ipsa vel mollitia numquam suscipit.</p>
+        </div>
+      </article>
+    </section>
+    <!-- job search  class="grid grid-cols-2"-->
+     <section class="my-20 bg-primary10 p-5">
+      <h2 class="text-4xl font-bold mb-5 text-wht capitalize text-center">search for job</h2>
+      <article>
+        <form action="" class="grid grid-cols-2 gap-10">
+          <div>
+            <select name="jobs" class="border p-2 px-5 w-full outline-none">
+              <option value="jobs">Jobs</option>
+              <option value="Software Engineer">Software Engineer</option>
+              <option value="Data Scientist">Data Scientist</option>
+              <option value="Product Manager">Product Manager</option>
+              <option value="Designer">Designer</option>
+              <option value="Marketing Specialist">Marketing Specialist</option>
+              <option value="Sales Representative">Sales Representative</option>
+              <option value="Customer Support Specialist">Customer Support Specialist</option>
+              <option value="Accountant">Accountant</option>
+              <option value="Teacher">Teacher</option>
+              <option value="Nurse">Nurse</option>
+            </select>
+          </div>
+          <div>
+            <select name="category" id="category" class="border p-2 px-5 w-full outline-none">
+              <option value="category">category</option>
+              <option value="Greater Accra">Greater Accra</option>
+              <option value="Central">Central</option>
+              <option value="Eastern">Eastern</option>
+              <option value="Western">Western</option>
+              <option value="Northern">Northern</option>
+              <option value="Upper East">Upper East</option>
+              <option value="Upper West">Upper West</option>
+              <option value="Volta">Volta</option>
+              <option value="Bono">Bono</option>
+              <option value="Ahafo">Ahafo</option>
+              <option value="Savannah">Savannah</option>
+              <option value="North East">North East</option>
+              <option value="Oti">Oti</option>
+              <option value="Bono East">Bono East</option>
+              <option value="Western North">Western North</option>
+            </select>
+          </div>
+          <div>
+            <select name="salary" class="border p-2 px-5 w-full outline-none">
+              <option value="salary from">Salary From</option>
+              <option value="1000-2000">1000-2000 GH₵</option>
+              <option value="2001-3000">2001-3000 GH₵</option>
+              <option value="3001-4000">3001-4000 GH₵</option>
+              <option value="4001-5000">4001-5000 GH₵</option>
+              <option value="5001-6000">5001-6000 GH₵</option>
+              <option value="6001-7000">6001-7000 GH₵</option>
+              <option value="7001-8000">7001-8000 GH₵</option>
+              <option value="8001-9000">8001-9000 GH₵</option>
+              <option value="9001-10000">9001-10000 GH₵</option>
+              <option value="10000+">10000+ GH₵</option>
+            </select>
+          </div>
+          <div>
+            <select name="salary" class="border p-2 px-5 w-full outline-none">
+              <option value="salary to">salary to</option>
+              <option value="1000-2000">2000-5000 GH₵</option>
+              <option value="2001-3000">3000-7000 GH₵</option>
+              <option value="3001-4000">4000-9000 GH₵</option>
+              <option value="4001-5000">5000-10000 GH₵</option>
+              <option value="5001-6000">6000-12000 GH₵</option>
+              <option value="6001-7000">7000-15000 GH₵</option>
+              <option value="7001-8000">8000-20000 GH₵</option>
+              <option value="8001-9000">9000-23000 GH₵</option>
+              <option value="9001-10000">10000-250000 GH₵</option>
+              <option value="10000+">25000+ GH₵</option>
+            </select>
+          </div>
+          <div class="flex justify-around">
+            <div class="flex space-x-3 text-primary30">
+              <input type="radio" class="w-6 h-6">
+              <label for="Full-Time">Full-Time (permanent)</label>
+            </div>
+            <div class="flex space-x-3 text-primary30">
+              <input type="radio" class="w-6 h-6">
+              <label for="part-time">part-time</label>
+            </div>
+            <div class="flex space-x-3 text-primary30">
+              <input type="radio" class="w-6 h-6">
+              <label for="interim">interim</label>
+            </div>
+          </div>
+          <button class="bg-primary20 p-2 rounded-sm text-wht uppercase font-medium">search</button>
+        </form>
+      </article>
+     </section>
+     <!-- testimonials -->
+      <section class="bg-primary20" id="testimonials">
+        <h1 class="text-6xl capitalize text-center pt-10 font-bold text-primary30">testimonials</h1>
+        <article class="grid grid-cols-4 gap-10 p-16">
+          <div class="relative bg-wht p-5 rounded-md overflow-hidden">
+            <div class="bg-gradient-to-r from-primary10 to-primary20 w-[120px] h-[100px] rounded-[50%] absolute -top-12 left-20"></div>
+            <p class="mb-5 mt-10 text-primary10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dolore illum et. Atque sequi earum ullam est aliquid ea cum explicabo enim sunt, beatae repellat molestiae odio culpa unde quisquam saepe esse. Sit nesciunt numquam, ab nihil totam placeat pariatur eaque nobis quis accusantium minus iure, aut temporibus dolor similique.</p>
+            <div>
+              <h1 class="font-bold capitalize">monkey D. luffy</h1>
+              <p class="text-primary20">head of community Asher</p>
+            </div>
+          </div>
+          <div class="relative bg-wht p-5 rounded-md overflow-hidden">
+            <div class="bg-gradient-to-r from-primary10 to-primary20 w-[120px] h-[100px] rounded-[50%] absolute -top-12 left-20"></div>
+            <p class="mb-5 mt-10 text-primary10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dolore illum et. Atque sequi earum ullam est aliquid ea cum explicabo enim sunt, beatae repellat molestiae odio culpa unde quisquam saepe esse. Sit nesciunt numquam, ab nihil totam placeat pariatur eaque nobis quis accusantium minus iure, aut temporibus dolor similique.</p>
+            <div>
+              <h1 class="font-bold capitalize">levi ackerman</h1>
+              <p class="text-primary20">head of community Asher</p>
+            </div>
+          </div>
+          <div class="relative bg-wht p-5 rounded-md overflow-hidden">
+            <div class="bg-gradient-to-r from-primary10 to-primary20 w-[120px] h-[100px] rounded-[50%] absolute -top-12 left-20"></div>
+            <p class="mb-5 mt-10 text-primary10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dolore illum et. Atque sequi earum ullam est aliquid ea cum explicabo enim sunt, beatae repellat molestiae odio culpa unde quisquam saepe esse. Sit nesciunt numquam, ab nihil totam placeat pariatur eaque nobis quis accusantium minus iure, aut temporibus dolor similique.</p>
+            <div>
+              <h1 class="font-bold capitalize">estone perez</h1>
+              <p class="text-primary20">ceo of del branch</p>
+            </div>
+          </div>
+          <div class="relative bg-wht p-5 rounded-md overflow-hidden">
+            <div class="bg-gradient-to-r from-primary10 to-primary20 w-[120px] h-[100px] rounded-[50%] absolute -top-12 left-20"></div>
+            <p class="mb-5 mt-10 text-primary10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dolore illum et. Atque sequi earum ullam est aliquid ea cum explicabo enim sunt, beatae repellat molestiae odio culpa unde quisquam saepe esse. Sit nesciunt numquam, ab nihil totam placeat pariatur eaque nobis quis accusantium minus iure, aut temporibus dolor similique.</p>
+            <div>
+              <h1 class="font-bold capitalize">elano</h1>
+              <p class="text-primary20">head of community Asher</p>
+            </div>
+          </div>
+        </article>
+      </section>
+  </main>
+<footer class="border-t-2 border-primary40 mt-[200px] bg-primary10 text-primary30">
+    <div class="grid grid-cols-12 py-[30px] mx-[40px] items-center">
+      <div class="col-span-3">
+          <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">our social medias</h3>
+          <div class="flex w-[45%]">
+              <a href="https://x.com/home"><img src="./icon/twitter-154-svgrepo-com.svg" alt="twitter icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://www.instagram.com/"><img src="./icon/instagram-svgrepo-com.svg" alt="instagram icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://web.facebook.com/"><img src="./icon/facebook-176-svgrepo-com.svg" alt="facebook icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://www.tiktok.com/login"><img src="./icon/tiktok-svgrepo-com.svg" alt="tiktok icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+          </div>
+      </div>
+      <div class="col-span-6">
+          <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">support</h3>
+          <ul class="flex">
+              <li class="mr-[30px]">Privacy Policy</li>
+              <li class="mr-[30px]">Terms & Conditions</li>
+              <li class="mr-[30px]">FAQs</li>
+              <li class="mr-[30px]">About Us</li>
+          </ul>
+      </div>
+      <div class="col-span-3">
+        <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">HR company</h3>
+          <p> &copy; yourNetwork </p>
+      </div>
+  </div>
+  </footer>
+</body>
+</html>

@@ -16,11 +16,35 @@
             primary30: '#ebedf3',
             primary40: '#BDBDBD',
             primary50: '#676767',
-          }
+          },
         }
       }
     }
   </script>
+    <style>
+      /* Typewriter keyframe */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+  
+      /* Blinking caret keyframe */
+      @keyframes blink-caret {
+        from, to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: black;
+        }
+      }
+      .typewriter-text {
+        animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite; 
+      }
+    </style>
 </head>
 <body class="">
   <header >
@@ -56,8 +80,13 @@
       </div>
      </div>
   </header>
-  <main>
-    <!-- intro -->
+  <main >
+    <!-- intro typewriter-->
+     <div class="text-center w-[100%] flex justify-center">
+      <div class="typewriter">
+        <h1 class="mt-10 capitalize text-6xl font-mono font-bold text-center border-r-4 border-blk whitespace-nowrap overflow-hidden w-[0] typewriter-text">you<span class="text-primary10 text-8xl">Y</span>network</h1>
+      </div>
+     </div>
      <section class="my-20 ml-5">
       <div class="grid grid-cols-2 gap-[20px] mb-[80px] w-4/5">
         <div class="imgsrc">
@@ -66,7 +95,7 @@
         <div>
             <h1 class="text-6xl mb-5 text-primary10 capitalize">we are youYnetwork</h1>
             <p class="font-bold text-primary50 text-xl">we help you: <span class="text-blk text-3xl">Hire Right</span></p>
-            <p class="my-[20px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, inventore. Quis voluptate beatae blanditiis exercitationem obcaecati minima sint nostrum provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis.
+            <p class="my-[20px]">At YouYNetwork, we're more than just an HR platform. We're a community of professionals dedicated to connecting talent with opportunities. Our mission is to foster meaningful relationships between businesses and individuals, empowering both to reach their full potential.
             </p>
         </div>
     </div>
@@ -74,7 +103,7 @@
         <div>
             <h1 class="text-6xl mb-5 text-primary10">Our Match Your Trusted Talent Bridge</h1>
             <p class="font-bold">Our commitment to fostering enduring connections between talented individuals and thriving businesses ensures mutual success and growth.</p>
-            <p class="my-[20px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, inventore. Quis voluptate beatae blanditiis exercitationem obcaecati minima sint nostrum provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis.
+            <p class="my-[20px]">We understand that job hunting can be a daunting task. That's why we've designed YouYNetwork to be intuitive, user-friendly, and tailored to your specific needs. From personalized job recommendations to career advice, we're here to guide you every step of the way.
             </p>
         </div>
         <div class="imgsrc">
@@ -88,10 +117,10 @@
       <article class="grid grid-cols-4 gap-10 p-5">
         <div class="p-5 shadow-sm border rounded-tl-[20px] rounded-br-[20px]">
           <div class="flex mb-5 gap-5">
-            <div class="w-[50%]">
-              <img src="./img/man2.jpg" alt="a man's picture" class="rounded-[50%]">
+            <div class="w-[70%]">
+              <img src="./img/mansmiling.jpg" alt="a man's picture" class="rounded-[50%] w-[100px] h-[95px]">
             </div>
-            <div class="w-[50%]">
+            <div class="w-[30%]">
               <h1 class="font-bold capitalize">william cobines</h1>
               <p>CEO</p>
             </div>
@@ -103,27 +132,12 @@
         </div>
         <div class="p-5 shadow-sm border rounded-tl-[20px] rounded-br-[20px]">
           <div class="flex mb-5 gap-5">
-            <div class="w-[50%]">
-              <img src="./img/man2.jpg" alt="a man's picture" class="rounded-[50%]">
+            <div class="w-[70%]">
+              <img src="./img/mansmiling1.jpg" alt="a man's picture" class="rounded-[50%] w-[100px] h-[95px]">
             </div>
-            <div class="w-[50%]">
-              <h1 class="font-bold capitalize">william cobines</h1>
-              <p>CEO</p>
-            </div>
-          </div>
-          <div class="ml-5 flex space-x-3">
-            <a href=""><img src="./icon/linkedin-svgrepo-com.svg" alt="linkedin-svgrepo-com" width="30px"></a>
-            <a href=""><img src="./icon/mail-svgrepo-com.svg" alt="mail" width="30px"></a>
-          </div>
-        </div>
-        <div class="p-5 shadow-sm border rounded-tl-[20px] rounded-br-[20px]">
-          <div class="flex mb-5 gap-5">
-            <div class="w-[50%]">
-              <img src="./img/man2.jpg" alt="a man's picture" class="rounded-[50%]">
-            </div>
-            <div class="w-[50%]">
-              <h1 class="font-bold capitalize">william cobines</h1>
-              <p>CEO</p>
+            <div class="w-[30%]">
+              <h1 class="font-bold capitalize">luke johnson</h1>
+              <p>Manager</p>
             </div>
           </div>
           <div class="ml-5 flex space-x-3">
@@ -133,12 +147,27 @@
         </div>
         <div class="p-5 shadow-sm border rounded-tl-[20px] rounded-br-[20px]">
           <div class="flex mb-5 gap-5">
-            <div class="w-[50%]">
-              <img src="./img/man2.jpg" alt="a man's picture" class="rounded-[50%]">
+            <div class="w-[70%]">
+              <img src="./img/womansmiling.jpg" alt="a man's picture" class="rounded-[50%] w-[100px] h-[95px]">
             </div>
-            <div class="w-[50%]">
-              <h1 class="font-bold capitalize">william cobines</h1>
-              <p>CEO</p>
+            <div class="w-[30%]">
+              <h1 class="font-bold capitalize">julia amandes</h1>
+              <p>President</p>
+            </div>
+          </div>
+          <div class="ml-5 flex space-x-3">
+            <a href=""><img src="./icon/linkedin-svgrepo-com.svg" alt="linkedin-svgrepo-com" width="30px"></a>
+            <a href=""><img src="./icon/mail-svgrepo-com.svg" alt="mail" width="30px"></a>
+          </div>
+        </div>
+        <div class="p-5 shadow-sm border rounded-tl-[20px] rounded-br-[20px]">
+          <div class="flex mb-5 gap-5">
+            <div class="w-[70%]">
+              <img src="./img/womansmiling1.jpg" alt="a man's picture" class="rounded-[50%] w-[100px] h-[95px]">
+            </div>
+            <div class="w-[30%]">
+              <h1 class="font-bold capitalize">grace cruise</h1>
+              <p>Technology Officer</p>
             </div>
           </div>
           <div class="ml-5 flex space-x-3">
@@ -157,7 +186,7 @@
             <img src="./icon/clock-twelve-thirty-svgrepo-com.svg" alt="clock" width="30px">
             <h3 class="font-bold capitalize">part time</h3>
           </div>
-          <p class="text-primary50 my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a nam fuga veritatis nemo laboriosam commodi ipsa vel mollitia numquam suscipit.</p>
+          <p class="text-primary50 my-3"> Our part-time positions offer a flexible schedule and the chance to gain valuable experience in the HR industry.</p>
           <a href="" class="uppercase text-primary20">more</a>
         </div>
         <div>
@@ -165,7 +194,7 @@
             <img src="./icon/clock-three-svgrepo-com.svg" alt="clock" width="30px">
             <h3 class="font-bold capitalize">full time</h3>
           </div>
-          <p class="text-primary50 my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a nam fuga veritatis nemo laboriosam commodi ipsa vel mollitia numquam suscipit.</p>
+          <p class="text-primary50 my-3">includes a comprehensive benefits package, such as health insurance, retirement plans, and paid time off. Provides a stable income and long-term career path.</p>
           <a href="" class="uppercase text-primary20">more</a>
         </div>
         <div>
@@ -173,7 +202,7 @@
             <img src="./icon/hourglass-start-solid-svgrepo-com.svg" alt="clock" width="30px">
             <h3 class="font-bold capitalize">interim</h3>
           </div>
-          <p class="text-primary50 my-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda a nam fuga veritatis nemo laboriosam commodi ipsa vel mollitia numquam suscipit.</p>
+          <p class="text-primary50 my-3">offer flexibility in terms of location and work hours. Require specialized skills or expertise to fulfill a specific project or need.</p>
           <a href="" class="uppercase text-primary20">more</a>
         </div>
       </article>
@@ -181,7 +210,7 @@
      <!-- more -->
       <section class="bg-primary10 bg-opacity-80 flex  text-wht h-[300px] items-center px-10 mb-10 mt-20">
         <h1 class="text-7xl ml-auto font-bold w-[30%]">Hire Fast Your Talent</h1>
-        <p class="w-[50%] ml-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi expedita nam quas, quae a dicta vitae soluta et omnis consequatur. Dolore magnam ullam temporibus eos consequatur necessitatibus quas adipisci? Aut inventore magnam fugiat dicta in repellendus, praesentium eos veniam minus sapiente necessitatibus velit quos! Hic fuga excepturi error dolorum reprehenderit.</p>
+        <p class="w-[50%] ml-auto">In today's fast-paced digital world, customers expect quick and efficient responses to their inquiries. Chatbots have emerged as a powerful tool to meet these expectations and enhance customer service experiences.</p>
       </section>
     <!-- seekng for a job -->
     <section class="w-4/5 mx-auto mb-10 shadow-sm shadow-primary20 p-6 mt-20">
@@ -304,33 +333,35 @@
         <article class="grid grid-cols-4 gap-10 p-16">
           <div class="relative bg-wht p-5 rounded-md overflow-hidden">
             <div class="bg-gradient-to-r from-primary10 to-primary20 w-[120px] h-[100px] rounded-[50%] absolute -top-12 left-20"></div>
-            <p class="mb-5 mt-10 text-primary10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dolore illum et. Atque sequi earum ullam est aliquid ea cum explicabo enim sunt, beatae repellat molestiae odio culpa unde quisquam saepe esse. Sit nesciunt numquam, ab nihil totam placeat pariatur eaque nobis quis accusantium minus iure, aut temporibus dolor similique.</p>
+            <p class="mb-5 mt-10 text-primary10">HR Hub has been a game-changer for our hiring process. Their user-friendly platform and extensive talent pool have helped us find top-notch candidates quickly and efficiently. I highly recommend them to any business looking to streamline their recruitment efforts</p>
             <div>
-              <h1 class="font-bold capitalize">monkey D. luffy</h1>
-              <p class="text-primary20">head of community Asher</p>
+              <h1 class="font-bold capitalize">koffi aman</h1>
+              <p class="text-primary20">From an employer</p>
             </div>
           </div>
           <div class="relative bg-wht p-5 rounded-md overflow-hidden">
             <div class="bg-gradient-to-r from-primary10 to-primary20 w-[120px] h-[100px] rounded-[50%] absolute -top-12 left-20"></div>
-            <p class="mb-5 mt-10 text-primary10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dolore illum et. Atque sequi earum ullam est aliquid ea cum explicabo enim sunt, beatae repellat molestiae odio culpa unde quisquam saepe esse. Sit nesciunt numquam, ab nihil totam placeat pariatur eaque nobis quis accusantium minus iure, aut temporibus dolor similique.</p>
+            <p class="mb-5 mt-10 text-primary10">I was able to find my dream job within weeks of joining HR Hub. The platform is easy to navigate, and the job listings are always up-to-date. I appreciate the personalized recommendations and career advice they offer.
+            </p>
             <div>
-              <h1 class="font-bold capitalize">levi ackerman</h1>
-              <p class="text-primary20">head of community Asher</p>
+              <h1 class="font-bold capitalize">ali kokoli</h1>
+              <p class="text-primary20">From a job seeker</p>
             </div>
           </div>
           <div class="relative bg-wht p-5 rounded-md overflow-hidden">
             <div class="bg-gradient-to-r from-primary10 to-primary20 w-[120px] h-[100px] rounded-[50%] absolute -top-12 left-20"></div>
-            <p class="mb-5 mt-10 text-primary10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dolore illum et. Atque sequi earum ullam est aliquid ea cum explicabo enim sunt, beatae repellat molestiae odio culpa unde quisquam saepe esse. Sit nesciunt numquam, ab nihil totam placeat pariatur eaque nobis quis accusantium minus iure, aut temporibus dolor similique.</p>
+            <p class="mb-5 mt-10 text-primary10">HR Hub has been an invaluable resource for our recruiting team. Their advanced search features and candidate analytics have helped us identify the best talent for our clients. The platform's customer support is excellent, and they're always ready to assist with any questions or concerns.</p>
             <div>
-              <h1 class="font-bold capitalize">estone perez</h1>
-              <p class="text-primary20">ceo of del branch</p>
+              <h1 class="font-bold capitalize">max perez</h1>
+              <p class="text-primary20">From a recruiter</p>
             </div>
           </div>
           <div class="relative bg-wht p-5 rounded-md overflow-hidden">
             <div class="bg-gradient-to-r from-primary10 to-primary20 w-[120px] h-[100px] rounded-[50%] absolute -top-12 left-20"></div>
-            <p class="mb-5 mt-10 text-primary10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit dolore illum et. Atque sequi earum ullam est aliquid ea cum explicabo enim sunt, beatae repellat molestiae odio culpa unde quisquam saepe esse. Sit nesciunt numquam, ab nihil totam placeat pariatur eaque nobis quis accusantium minus iure, aut temporibus dolor similique.</p>
+            <p class="mb-5 mt-10 text-primary10">As a small business owner, I was hesitant to invest in a recruitment platform. However, HR Hub has proven to be a worthwhile investment. Their affordable pricing and personalized support have helped me find the right candidates for my team. I'm impressed with the quality of service they provide.
+            </p>
             <div>
-              <h1 class="font-bold capitalize">elano</h1>
+              <h1 class="font-bold capitalize">matt jason</h1>
               <p class="text-primary20">head of community Asher</p>
             </div>
           </div>

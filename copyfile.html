@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wht: '#ffffff',
+            blk: '#000000',
+            primary10: '#003b6d',
+            primary20: '#6699cc',
+            primary30: '#ebedf3',
+            primary40: '#BDBDBD',
+            primary50: '#676767',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="">
+  <header >
+    <!-- navigation bar -->
+    <nav class="z-[1000] fixed w-screen bg-primary10">
+      <div class="flex justify-between items-center px-[80px] py-2 h-16">
+        <!-- logo section -->
+        <div class="flex items-center">
+          <a href="#">
+            <img src="./img/logo.webp" alt="your network logo" width="50px">
+          </a>
+        </div>
+        <!-- links -->
+        <div class="flex space-x-4">
+          <a class="text-primary30 hover:text-primary40" href="index.html">Home</a>
+          <a class="text-primary30 hover:text-primary40" href="AboutUs.html">About</a>
+          <a class="text-primary30 hover:text-primary40" href="ContactUs.html">Contact</a>
+          <a class="text-primary30 hover:text-primary40" href="Services.html">Services</a>
+          <a class="text-primary30 hover:text-primary40" href="Events.html">Events</a>
+        </div>
+        <div class="flex space-x-4">
+          <a class="text-primary30 hover:text-primary40" href="Login.html">Login</a>
+          <a class="text-primary30 hover:text-primary40" href="JoinUS.html">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+    <!-- hero section -->
+     <div class="bg-[url('img/hero.webp')] pt-16 h-screen bg-cover bg-center bg-black bg-opacity-60 bg-blend-darken relative flex justify-center items-center">
+      <div class="text-primary30 absolute text-center px-[20%]">
+        <h1 class="text-5xl font-bold mb-10">We are an Inclusive Global Community of Social Entrepreneurs and Changemakers.</h1>
+        <a href="JoinUS.html" class="bg-primary10 py-2 px-4 rounded hover:bg-primary20">Join US</a>
+      </div>
+     </div>
+  </header>
+  <main class="w-[100%]">
+    <div class="w-4/5 my-[90px] mx-auto">
+        <h1 class="text-center mb-12 uppercase text-5xl font-sans">about your NETWORK</h1>
+        <div class="grid grid-cols-2 gap-[20px] mb-[80px]">
+            <div>
+                <h1 class="text-3xl mb-5 text-primary10">How We Got Started</h1>
+                <p class="font-bold">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                <p class="my-[20px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, inventore. Quis voluptate beatae blanditiis exercitationem obcaecati minima sint nostrum provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis.
+                </p>
+                <a href="OurStory.html" class="uppercase text-primary50 hover:text-primary10">more about our story</a>
+            </div>
+            <div class="imgsrc">
+                <img src="./img/clock-3222267_1280.jpg" alt="group picture" class="w-[100%] rounded-[10px]">
+            </div>
+        </div>
+        <div class="my-20 w-4/5 mx-auto">
+            <div>
+                <p class="my-[20px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, inventore. Quis voluptate beatae blanditiis exercitationem obcaecati minima sint nostrum provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maxime ipsa ratione! Nam, corrupti maxime?
+                </p>
+            </div>
+            <div class="imgsrc">
+                <img src="./img/match.jpg" alt="group picture" class="w-[100%] rounded-[10px]">
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-[20px] mb-[80px]">
+            <div class="imgsrc">
+                <img src="./img/trust.jpg" alt="group picture" class="w-[100%] rounded-[10px]">
+            </div>
+            <div>
+                <h1 class="text-3xl mb-5 text-primary10">HR Philosophy and values</h1>
+                <p class="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consectetur.</p>
+                <p class="my-[20px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, inventore. Quis voluptate beatae blanditiis exercitationem obcaecati minima sint nostrum provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis.
+                </p>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-[20px] mb-[80px]">
+            <div>
+                <h1 class="text-3xl mb-5 text-primary10">our teams</h1>
+                <p class="font-bold">SRC sport academy your first sports institution in the region</p>
+                <p class="my-[20px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, inventore. Quis voluptate beatae blanditiis exercitationem obcaecati minima sint nostrum provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis.
+                </p>
+            </div>
+            <div class="imgsrc">
+                <img src="./img/grouppicture.jpg" alt="group picture" class="w-[100%] rounded-[10px]">
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-[20px] mb-[80px]">
+            <div class="imgsrc">
+                <img src="./img/looking-for-a-job-1257233_1280.jpg" alt="group picture" class="w-[100%] rounded-[10px]">
+            </div>
+            <div>
+                <h1 class="text-3xl mb-5 text-primary10">Career Opportunities</h1>
+                <p class="font-bold">SRC sport academy your first sports institution in the region</p>
+                <p class="my-[20px]">is your one-stop solution for all your hiring needs. With a vast database of talented professionals and powerful tools, we make it easy for employers to find the perfect candidates and for job seekers to discover exciting opportunities
+                </p>
+            </div>
+        </div>
+    </div>
+  </main>
+  <button class="bg-primary30 text-primary10 capitalize py-2 px-4 rounded-md fixed bottom-[20px] right-4 hidden shadow-2xl shadow-primary10" id="topButton">go to top</button>
+  <footer class="border-t-2 border-primary40 mt-[200px] bg-primary10 text-primary30"></footer>
+    <div class="grid grid-cols-12 py-[30px] mx-[40px] items-center">
+      <div class="col-span-3">
+          <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">our social medias</h3>
+          <div class="flex w-[45%]">
+              <a href="https://x.com/home"><img src="./icon/twitter-154-svgrepo-com.svg" alt="twitter icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://www.instagram.com/"><img src="./icon/instagram-svgrepo-com.svg" alt="instagram icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://web.facebook.com/"><img src="./icon/facebook-176-svgrepo-com.svg" alt="facebook icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://www.tiktok.com/login"><img src="./icon/tiktok-svgrepo-com.svg" alt="tiktok icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+          </div>
+      </div>
+      <div class="col-span-6">
+          <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">support</h3>
+          <ul class="flex">
+              <li class="mr-[30px]">Privacy Policy</li>
+              <li class="mr-[30px]">Terms & Conditions</li>
+              <li class="mr-[30px]">FAQs</li>
+              <li class="mr-[30px]">About Us</li>
+          </ul>
+      </div>
+      <div class="col-span-3">
+        <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">HR company</h3>
+          <p> &copy; yourNetwork </p>
+      </div>
+  </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

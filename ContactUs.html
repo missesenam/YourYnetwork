@@ -16,41 +16,107 @@
             primary30: '#ebedf3',
             primary40: '#BDBDBD',
             primary50: '#676767',
-          }
+          },
         }
       }
     }
   </script>
+    <style>
+      /* Typewriter keyframe */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+  
+      /* Blinking caret keyframe */
+      @keyframes blink-caret {
+        from, to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: black;
+        }
+      }
+      .typewriter-text {
+        animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite; 
+      }
+      .hamburger-menu::before,
+        .hamburger-menu::after,
+        .hamburger-menu span{
+            content: '';
+            width: 45px;
+            height: 6px;
+            background: white;
+            border-radius: 100px;
+        }
+        .close-menu{
+          position: relative;
+           width: 40px;
+          height: 40px;
+          transform: rotate(45deg);
+        }
+        .close-menu::before,
+        .close-menu::after{
+            content: '';
+            background: white;
+            position: absolute;
+        }
+        .close-menu::before{
+          width: 10%;
+          height: 100%;
+          left: 50%;
+          margin-left: -3px;
+        }
+        .close-menu::after{
+          width: 100%;
+          height: 10%;
+          top:50%;
+          margin-top: -4px;
+        }
+    </style>
 </head>
-<body class="">
-  <header >
+<body>
+  <header>
     <!-- navigation bar -->
-    <nav class="z-[1000] fixed w-screen bg-primary10">
-      <div class="flex justify-between items-center px-[80px] py-2 h-16">
-        <!-- logo section -->
-        <div class="flex items-center">
+     <nav class="z-[1000] fixed w-screen bg-primary10">
+      <div class="flex justify-between items-center px-[30px] py-2 h-16 md:px-0 md:pl-[60px]">
+        <!-- logo -->
+        <div>
           <a href="#">
             <img src="./img/logo.webp" alt="your network logo" width="50px">
           </a>
         </div>
         <!-- links -->
-        <div class="flex space-x-4">
-          <a class="text-primary30 hover:text-primary40" href="index.html">Home</a>
-          <a class="text-primary30 hover:text-primary40" href="AboutUs.html">About</a>
-          <a class="text-primary30 hover:text-primary40" href="ContactUs.html">Contact</a>
-          <a class="text-primary30 hover:text-primary40" href="Services.html">Services</a>
-          <a class="text-primary30 hover:text-primary40" href="Events.html">Events</a>
+        <div class="bg-primary10 bg-opacity-95 fixed top-0 right-0 h-screen w-full grid grid-row-3 pt-5 px-5 sm:w-[300px] hidden md:block md:w-[80%] md:h-auto md:flex md:justify-between" id="menu-bar">
+          <div class="close-menu flex flex-col gap-2 ml-auto pointer md:hidden" onclick="hidesidebar()">
+          </div>
+          <div class="flex flex-col items-center gap-5 md:flex-row md:flex-row">
+            <a class="text-primary30 hover:text-primary40" href="index.html">Home</a>
+            <a class="text-primary30 hover:text-primary40" href="AboutUs.html">About</a>
+            <a class="text-primary30 hover:text-primary40" href="ContactUs.html">Contact</a>
+            <a class="text-primary30 hover:text-primary40" href="Services.html">Services</a>
+            <a class="text-primary30 hover:text-primary40" href="Events.html">Events</a>
+            <a class="text-primary30 hover:text-primary40" href="#testimonials">Testimonials</a>
+          </div>
+          <div class="flex justify-center gap-5">
+            <a class="text-primary30 hover:text-primary40" href="Login.html">Login</a>
+            <a class="text-primary30 hover:text-primary40" href="JoinUS.html">Sign Up</a>
+          </div>
         </div>
-        <div class="flex space-x-4">
-          <a class="text-primary30 hover:text-primary40" href="Login.html">Login</a>
-          <a class="text-primary30 hover:text-primary40" href="JoinUS.html">Sign Up</a>
+        <!-- hamburger menu -->
+        <div class="hamburger-menu flex flex-col gap-2 cursor-pointer md:hidden" onclick="showsidebar()" id="showlinks">
+          <span></span>
         </div>
       </div>
-    </nav>
-    <!-- hero section -->
+     </nav>
+     <!-- hero section  overflow-hidden-->
      <div class="bg-[url('img/hero.webp')] pt-16 h-screen bg-cover bg-center bg-black bg-opacity-60 bg-blend-darken relative flex justify-center items-center">
-        <h1 class="text-8xl text-primary30 capitalize absolute top-[40%]">contact us</h1>
-      <div class="absolute w-[300px] p-5 top-[80%] bg-primary30 capitalize flex flex-col gap-5 text-primary10">
+      <h1 class="text-5xl text-primary30 capitalize absolute top-[40%]">contact us</h1>
+      <div class="absolute w-[90vw] sm:w-[400px] p-5 top-[80%] bg-primary30 capitalize flex flex-col gap-5 text-primary10">
         <h1 class="font-medium text-3xl text-center">get in touch</h1>
         <p>address: yourYnetwork, P. O. Box 4731, accra, Ghana.</p>
         <p>call: +233 6483648202</p>
@@ -58,56 +124,95 @@
       </div>
      </div>
   </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
   <main>
     <section class="my-[150px] w-5/6 mx-auto">
-        <form action="" class="grid grid-cols-3 gap-5">
-            <div>
-                <label for="firstname" class="capitalize block mb-3 text-2xl">first name</label>
-                <input type="text" class="bg-primary20 py-2 px-4 w-full outline-none placeholder:text-primary30 placeholder:capitalize text-wht" placeholder="first name">
-            </div>
-            <div>
-                <label for="lastname" class="capitalize block mb-3 text-2xl">last name</label>
-                <input type="text" class="bg-primary20 py-2 px-4 w-full outline-none placeholder:text-primary30 placeholder:capitalize text-wht" placeholder="last name">
-            </div>
-            <div>
-                <label for="email" class="capitalize block mb-3 text-2xl">email</label>
-                <input type="text" class="bg-primary20 py-2 px-4 w-full outline-none placeholder:text-primary30 placeholder:capitalize text-wht" placeholder="email">
-            </div>
-            <div>
-                <label for="message" class="capitalize block mb-3 text-2xl">message</label>
-                <textarea name="comments" class="bg-primary20 py-2 px-4 w-full outline-none placeholder:text-primary30placeholder:capitalize text-wht"></textarea>
-            </div>
-        </form>
-        <button class="bg-primary40 py-2 px-5 mt-10 text-wht hover:bg-primary20 uppercase rounded-md ">submit</button>
+      <form action="" class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+        <div>
+            <label for="firstname" class="capitalize block mb-3 text-2xl">first name</label>
+            <input type="text" class="bg-primary20 py-2 px-4 w-full outline-none placeholder:text-primary30 placeholder:capitalize text-wht" placeholder="first name">
+        </div>
+        <div>
+            <label for="lastname" class="capitalize block mb-3 text-2xl">last name</label>
+            <input type="text" class="bg-primary20 py-2 px-4 w-full outline-none placeholder:text-primary30 placeholder:capitalize text-wht" placeholder="last name">
+        </div>
+        <div>
+            <label for="email" class="capitalize block mb-3 text-2xl">email</label>
+            <input type="text" class="bg-primary20 py-2 px-4 w-full outline-none placeholder:text-primary30 placeholder:capitalize text-wht" placeholder="email">
+        </div>
+        <div>
+            <label for="message" class="capitalize block mb-3 text-2xl">message</label>
+            <textarea name="comments" class="bg-primary20 py-2 px-4 w-full outline-none placeholder:text-primary30placeholder:capitalize text-wht"></textarea>
+        </div>
+    </form>
+    <button class="bg-primary40 py-2 px-5 mt-10 text-wht hover:bg-primary20 uppercase rounded-md ">submit</button>
     </section>
   </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <button class="bg-primary30 text-primary10 capitalize py-2 px-4 rounded-md fixed bottom-[20px] right-4 hidden shadow-2xl shadow-primary10" id="topButton">go to top</button>
   <footer class="border-t-2 border-primary40 mt-[200px] bg-primary10 text-primary30">
-      <div class="grid grid-cols-12 py-[30px] mx-[40px] items-center">
-        <div class="col-span-3">
-            <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">our social medias</h3>
-            <div class="flex w-[45%]">
-                <a href="https://x.com/home"><img src="./icon/twitter-154-svgrepo-com.svg" alt="twitter icon" width="30px" class="mr-[1rem] p-[5px] "></a>
-                <a href="https://www.instagram.com/"><img src="./icon/instagram-svgrepo-com.svg" alt="instagram icon" width="30px" class="mr-[1rem] p-[5px] "></a>
-                <a href="https://web.facebook.com/"><img src="./icon/facebook-176-svgrepo-com.svg" alt="facebook icon" width="30px" class="mr-[1rem] p-[5px] "></a>
-                <a href="https://www.tiktok.com/login"><img src="./icon/tiktok-svgrepo-com.svg" alt="tiktok icon" width="30px" class="mr-[1rem] p-[5px] "></a>
-            </div>
-        </div>
-        <div class="col-span-6">
-            <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">support</h3>
-            <ul class="flex">
-                <li class="mr-[30px]">Privacy Policy</li>
-                <li class="mr-[30px]">Terms & Conditions</li>
-                <li class="mr-[30px]">FAQs</li>
-                <li class="mr-[30px]">About Us</li>
-            </ul>
-        </div>
-        <div class="col-span-3">
-          <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">HR company</h3>
-            <p> &copy; yourNetwork </p>
-        </div>
-    </div>
-    </footer>
-    <script src="main.js"></script>
-  </body>
-  </html>
+    <div class="grid grid-cols-1 items-center md:grid-cols-12 py-[30px] md:mx-[20px] text-center">
+      <div class="md:col-span-3">
+          <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">our social medias</h3>
+          <div class="flex justify-center">
+              <a href="https://x.com/home"><img src="./icon/twitter-154-svgrepo-com.svg" alt="twitter icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://www.instagram.com/"><img src="./icon/instagram-svgrepo-com.svg" alt="instagram icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://web.facebook.com/"><img src="./icon/facebook-176-svgrepo-com.svg" alt="facebook icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+              <a href="https://www.tiktok.com/login"><img src="./icon/tiktok-svgrepo-com.svg" alt="tiktok icon" width="30px" class="mr-[1rem] p-[5px] "></a>
+          </div>
+      </div>
+      <div class="md:col-span-6 ">
+          <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">support</h3>
+          <ul class="flex justify-between md:justify-center">
+              <li class="md:mr-[1.5rem]">Privacy Policy</li>
+              <li class="md:mr-[1.5rem]">Terms & Conditions</li>
+              <li class="md:mr-[1.5rem]">FAQs</li>
+              <li class="md:mr-[1.5rem]">About Us</li>
+          </ul>
+      </div>
+      <div class="md:col-span-3">
+        <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">HR company</h3>
+          <p> &copy; yourNetwork </p>
+      </div>
+  </div>
+  </footer>
+<script src="main.js"></script>
+</body>
+</html>

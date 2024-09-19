@@ -16,106 +16,171 @@
             primary30: '#ebedf3',
             primary40: '#BDBDBD',
             primary50: '#676767',
-          }
+          },
         }
       }
     }
   </script>
+    <style>
+      /* Typewriter keyframe */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+  
+      /* Blinking caret keyframe */
+      @keyframes blink-caret {
+        from, to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: black;
+        }
+      }
+      .typewriter-text {
+        animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite; 
+      }
+      .hamburger-menu::before,
+        .hamburger-menu::after,
+        .hamburger-menu span{
+            content: '';
+            width: 45px;
+            height: 6px;
+            background: white;
+            border-radius: 100px;
+        }
+        .close-menu{
+          position: relative;
+           width: 40px;
+          height: 40px;
+          transform: rotate(45deg);
+        }
+        .close-menu::before,
+        .close-menu::after{
+            content: '';
+            background: white;
+            position: absolute;
+        }
+        .close-menu::before{
+          width: 10%;
+          height: 100%;
+          left: 50%;
+          margin-left: -3px;
+        }
+        .close-menu::after{
+          width: 100%;
+          height: 10%;
+          top:50%;
+          margin-top: -4px;
+        }
+    </style>
 </head>
-<body class="">
-  <header >
+<body>
+  <header>
     <!-- navigation bar -->
-    <nav class="z-[1000] fixed w-screen bg-primary10">
-      <div class="flex justify-between items-center px-[80px] py-2 h-16">
-        <!-- logo section -->
-        <div class="flex items-center">
+     <nav class="z-[1000] fixed w-screen bg-primary10">
+      <div class="flex justify-between items-center px-[30px] py-2 h-16 md:px-0 md:pl-[60px]">
+        <!-- logo -->
+        <div>
           <a href="#">
             <img src="./img/logo.webp" alt="your network logo" width="50px">
           </a>
         </div>
         <!-- links -->
-        <div class="flex space-x-4">
-          <a class="text-primary30 hover:text-primary40" href="index.html">Home</a>
-          <a class="text-primary30 hover:text-primary40" href="AboutUs.html">About</a>
-          <a class="text-primary30 hover:text-primary40" href="ContactUs.html">Contact</a>
-          <a class="text-primary30 hover:text-primary40" href="Services.html">Services</a>
-          <a class="text-primary30 hover:text-primary40" href="Events.html">Events</a>
+        <div class="bg-primary10 bg-opacity-95 fixed top-0 right-0 h-screen w-full grid grid-row-3 pt-5 px-5 sm:w-[300px] hidden md:block md:w-[80%] md:h-auto md:flex md:justify-between" id="menu-bar">
+          <div class="close-menu flex flex-col gap-2 ml-auto pointer md:hidden" onclick="hidesidebar()">
+          </div>
+          <div class="flex flex-col items-center gap-5 md:flex-row md:flex-row">
+            <a class="text-primary30 hover:text-primary40" href="index.html">Home</a>
+            <a class="text-primary30 hover:text-primary40" href="AboutUs.html">About</a>
+            <a class="text-primary30 hover:text-primary40" href="ContactUs.html">Contact</a>
+            <a class="text-primary30 hover:text-primary40" href="Services.html">Services</a>
+            <a class="text-primary30 hover:text-primary40" href="Events.html">Events</a>
+          </div>
+          <div class="flex justify-center gap-5">
+            <a class="text-primary30 hover:text-primary40" href="Login.html">Login</a>
+            <a class="text-primary30 hover:text-primary40" href="JoinUS.html">Sign Up</a>
+          </div>
         </div>
-        <div class="flex space-x-4">
-          <a class="text-primary30 hover:text-primary40" href="Login.html">Login</a>
-          <a class="text-primary30 hover:text-primary40" href="JoinUS.html">Sign Up</a>
+        <!-- hamburger menu -->
+        <div class="hamburger-menu flex flex-col gap-2 cursor-pointer md:hidden" onclick="showsidebar()" id="showlinks">
+          <span></span>
         </div>
       </div>
-    </nav>
-    <!-- hero section -->
-     <div class="bg-[url('img/hero.webp')] pt-16 h-screen bg-cover bg-center bg-black bg-opacity-60 bg-blend-darken relative flex justify-center items-center">
+     </nav>
+     <!-- hero section -->
+     <div class="bg-[url('img/hero.webp')] pt-16 h-screen bg-cover bg-center bg-black bg-opacity-60 bg-blend-darken relative flex justify-center items-center overflow-hidden">
       <div class="text-primary30 absolute text-center px-[20%]">
         <h1 class="text-5xl font-bold mb-10">We are an Inclusive Global Community of Social Entrepreneurs and Changemakers.</h1>
-        <a href="JoinUS.html" class="bg-primary10 py-2 px-4 rounded hover:bg-primary20">Join US</a>
+        <a href="JoinUS.html" class="bg-primary10 text-wht py-2 px-4 rounded hover:bg-primary20">Join US</a>
       </div>
      </div>
   </header>
   <main>
-    <section class="w-4/6 mx-auto my-10">
-        <div class="grid grid-cols-2 gap-[20px] mb-[80px]">
-            <div class="imgsrc">
-                <img src="./img/grouppicture.jpg" alt="group picture" class="w-[100%] rounded-[10px]">
-            </div>
-            <div>
-                <h1 class="text-3xl mb-5 text-primary10">about yourYnetwork</h1>
-                <p class="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consectetur.</p>
-                <p class="my-[20px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, inventore. Quis voluptate beatae blanditiis exercitationem obcaecati minima sint nostrum provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis.
-                </p>
-            </div>
-        </div>
+    <section class="w-[90%] md:w-5/6 xl:w-5/6 mx-auto my-10">
+      <div class="grid md:w-[90%] mx-auto xl:grid-cols-2 gap-[20px] mb-[80px]">
+          <div class="w-[90%] md:w-4/5 mx-auto">
+              <img src="./img/grouppicture.jpg" alt="group picture" class="rounded-[10px]">
+          </div>
+          <div>
+              <h1 class="text-3xl mb-5 text-primary10">about yourYnetwork</h1>
+              <p class="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consectetur.</p>
+              <p class="my-[20px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, inventore. Quis voluptate beatae blanditiis exercitationem obcaecati minima sint nostrum provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, omnis.
+              </p>
+          </div>
+      </div>
     </section>
-    <section class="w-3/5 mx-auto mb-10">
-        <h1 class="text-5xl mb-5 text-primary10">founder stories</h1>
+    <section class="w-4/5 xl:w-3/5 mx-auto mb-10">
+        <h1 class="text-3xl mb-5 text-primary10">founder stories</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur impedit, dolorem dolores iusto doloribus veritatis accusantium unde molestias nobis, dignissimos tempora deleniti ab architecto fuga nulla aliquam eaque! Officia aliquam, saepe inventore unde fugiat voluptas perspiciatis ducimus alias id eligendi laudantium corporis minima repellat pariatur reiciendis impedit maxime nostrum consequatur ex quasi! Nostrum ex totam quasi aperiam praesentium nobis, quos mollitia vitae ipsam debitis, dolore iusto doloremque velit non dolores amet culpa hic eum. Quibusdam recusandae nam inventore hic iure at sequi, illo, libero nostrum, ex dolor aliquid itaque eaque tempore amet. Perferendis vel reiciendis voluptates aliquam eveniet nisi!</p>
     </section>
-    <section class="w-3/5 mx-auto mb-10">
+    <section class="w-4/5 xl:w-3/5 mx-auto mb-10">
         <h1 class="text-5xl mb-5 text-primary10">Lorem ipsum dolor.</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur impedit, dolorem dolores iusto doloribus veritatis accusantium unde molestias nobis, dignissimos tempora deleniti ab architecto fuga nulla aliquam eaque! Officia aliquam, saepe inventore unde fugiat voluptas perspiciatis ducimus alias id eligendi laudantium corporis minima repellat pariatur reiciendis impedit maxime nostrum consequatur ex quasi! Nostrum ex totam quasi aperiam praesentium nobis, quos mollitia vitae ipsam debitis, dolore iusto doloremque velit non dolores amet culpa hic eum. Quibusdam recusandae nam inventore hic iure at sequi, illo, libero nostrum, ex dolor aliquid itaque eaque tempore amet. Perferendis vel reiciendis voluptates aliquam eveniet nisi!</p>
     </section>
-    <section class="w-4/5 mx-auto">
+    <section class="w-[90%] md:w-4/5 mx-auto">
         <img src="./img/shake.jpg" alt="people shaking hand">
     </section>
-    <section class="w-3/6 mx-auto my-10">
+    <section class="w-4/5 xl:w-3/5 mx-auto my-10">
         <h1 class="text-5xl mb-5 text-primary10">Lorem ipsum dolor.</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur impedit, dolorem dolores iusto doloribus veritatis accusantium unde molestias nobis, dignissimos tempora deleniti ab architecto fuga nulla aliquam eaque! Officia aliquam, saepe inventore unde fugiat voluptas perspiciatis ducimus alias id eligendi laudantium corporis minima repellat pariatur reiciendis impedit maxime nostrum consequatur ex quasi! Nostrum ex totam quasi aperiam praesentium nobis, quos mollitia vitae ipsam debitis, dolore iusto doloremque velit non dolores amet culpa hic eum. Quibusdam recusandae nam inventore hic iure at sequi, illo, libero nostrum, ex dolor aliquid itaque eaque tempore amet. Perferendis vel reiciendis voluptates aliquam eveniet nisi!</p>
     </section>
-    <section class="w-3/5 mx-auto mb-10">
+    <section class="w-4/5 xl:w-3/5 mx-auto mb-10">
         <h1 class="text-5xl mb-5 text-primary10">Lorem ipsum dolor.</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur impedit, dolorem dolores iusto doloribus veritatis accusantium unde molestias nobis, dignissimos tempora deleniti ab architecto fuga nulla aliquam eaque! Officia aliquam, saepe inventore unde fugiat voluptas perspiciatis ducimus alias id eligendi laudantium corporis minima repellat pariatur reiciendis impedit maxime nostrum consequatur ex quasi! Nostrum ex totam quasi aperiam praesentium nobis, quos mollitia vitae ipsam debitis, dolore iusto doloremque velit non dolores amet culpa hic eum. Quibusdam recusandae nam inventore hic iure at sequi, illo, libero nostrum, ex dolor aliquid itaque eaque tempore amet. Perferendis vel reiciendis voluptates aliquam eveniet nisi!</p>
     </section>
   </main>
   <button class="bg-primary30 text-primary10 capitalize py-2 px-4 rounded-md fixed bottom-[20px] right-4 hidden shadow-2xl shadow-primary10" id="topButton">go to top</button>
-<footer class="border-t-2 border-primary40 mt-[200px] bg-primary10 text-primary30">
-    <div class="grid grid-cols-12 py-[30px] mx-[40px] items-center">
-      <div class="col-span-3">
+  <footer class="border-t-2 border-primary40 mt-[200px] bg-primary10 text-primary30">
+    <div class="grid grid-cols-1 items-center md:grid-cols-12 py-[30px] md:mx-[20px] text-center">
+      <div class="md:col-span-3">
           <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">our social medias</h3>
-          <div class="flex w-[45%]">
+          <div class="flex justify-center">
               <a href="https://x.com/home"><img src="./icon/twitter-154-svgrepo-com.svg" alt="twitter icon" width="30px" class="mr-[1rem] p-[5px] "></a>
               <a href="https://www.instagram.com/"><img src="./icon/instagram-svgrepo-com.svg" alt="instagram icon" width="30px" class="mr-[1rem] p-[5px] "></a>
               <a href="https://web.facebook.com/"><img src="./icon/facebook-176-svgrepo-com.svg" alt="facebook icon" width="30px" class="mr-[1rem] p-[5px] "></a>
               <a href="https://www.tiktok.com/login"><img src="./icon/tiktok-svgrepo-com.svg" alt="tiktok icon" width="30px" class="mr-[1rem] p-[5px] "></a>
           </div>
       </div>
-      <div class="col-span-6">
+      <div class="md:col-span-6 ">
           <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">support</h3>
-          <ul class="flex">
-              <li class="mr-[30px]">Privacy Policy</li>
-              <li class="mr-[30px]">Terms & Conditions</li>
-              <li class="mr-[30px]">FAQs</li>
-              <li class="mr-[30px]">About Us</li>
+          <ul class="flex justify-between md:justify-center">
+              <li class="md:mr-[1.5rem]">Privacy Policy</li>
+              <li class="md:mr-[1.5rem]">Terms & Conditions</li>
+              <li class="md:mr-[1.5rem]">FAQs</li>
+              <li class="md:mr-[1.5rem]">About Us</li>
           </ul>
       </div>
-      <div class="col-span-3">
+      <div class="md:col-span-3">
         <h3 class="capitalize mb-[10px] text-primary20 font-bold text-xl">HR company</h3>
           <p> &copy; yourNetwork </p>
       </div>
   </div>
   </footer>
-  <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

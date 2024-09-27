@@ -11,8 +11,8 @@
           colors: {
             wht: '#ffffff',
             blk: '#000000',
-            primary10: '#003b6d',
-            primary20: '#6699cc',
+            primary10: '#1d1d1d',
+            primary20: '#fae22c',
             primary30: '#ebedf3',
             primary40: '#BDBDBD',
             primary50: '#676767',
@@ -21,24 +21,30 @@
       }
     }
   </script>
+  <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+    <script type="text/javascript">
+      (function(){
+       emailjs.init({
+         publicKey: "RJDDctu1ORGGz5Qm7",
+       });
+    })();
+    </script>
 </head>
 <body class="bg-primary10">
     <h1 class="my-5 text-5xl md:text-[7vw] xl:text-[5vw] text-wht capitalize font-bold text-center">Subscribe for new updates</h1>
     <main class="flex justify-center items-center">
         <div class="w-[80%] md:w-[600px] bg-primary30 p-5 my-5">
-            <form action="">
+            <form id="form" onsubmit="sendEmail(); return false">
                 <h1 class="font-bold text-4xl md:text-[5vw] xl:text-[3vw] capitalize text-primary10 text-center">type your information</h1>
                     <div class="my-5">
                         <label for="fullName" class="block capitalize text-2xl font-bold text-primary50 mb-3">full name</label>
                         <input type="text" id="fullName" name="fullName" placeholder="write your full name" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40 outline-none focus-within:border-primary10">
                     </div>
                     <div class="mb-5">
-                        <label for="fullName" class="block capitalize text-2xl font-bold text-primary50 mb-3">last name</label>
-                        <input type="text" id="lastName" name="lastName" placeholder="write your last name" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40 outline-none focus-within:border-primary10">
-                    </div>
-                    <div class="mb-5">
-                        <label for="Email" class="block capitalize text-2xl font-bold text-primary50 mb-3">enter your email</label>
-                        <input type="text" id="Email" name="Email" placeholder="write your Email" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40 outline-none focus-within:border-primary10">
+                        <label for="Email" class="block capitalize text-2xl font-bold text-primary50 mb-3" >enter your email</label>
+                        <input type="text" id="theemail" name="Email" placeholder="write your Email" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40 outline-none focus-within:border-primary10">
                     </div>
                     <div class="mb-5">
                         <label for="Country" class="block capitalize text-2xl font-bold text-primary50 mb-3">What country are you in?</label>
@@ -60,20 +66,27 @@
                         </div>
                     </div>
                     <div class="text-center mt-8 mb-6">
-                        <button class="p-2 bg-primary10 text-primary30 rounded-md">Subscribe</button>
+                        <button class="p-2 bg-primary10 text-primary30 rounded-md" type="submit">Subscribe</button>
                     </div>
             </form>
         </div>
     </main>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+
     <script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "YOUR_PUBLIC_KEY",
-      });
-   })();
-</script>
+function sendEmail(){
+  const messageParams = {
+name: document.getElementById('fullName').value,
+email: document.getElementById('theemail').value,
+country: document.getElementById('Country').value, }
+emailjs.sendForm('service_00npvjd', 'template_d2v6cgj', '#form').then(
+  (response) => {
+    console.log('SUCCESS!', response.status, response.text);
+  },
+  (error) => {
+    console.log('FAILED...', error);
+  },
+);
+}
+    </script>
 </body>
 </html>

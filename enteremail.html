@@ -22,20 +22,58 @@
     }
   </script>
 </head>
-<body class="bg-primary20">
-    <h1 class="my-5 text-5xl md:text-[7vw] xl:text-[5vw] text-wht capitalize font-bold text-center">enter your email for new updates</h1>
+<body class="bg-primary10">
+    <h1 class="my-5 text-5xl md:text-[7vw] xl:text-[5vw] text-wht capitalize font-bold text-center">Subscribe for new updates</h1>
     <main class="flex justify-center items-center">
         <div class="w-[80%] md:w-[600px] bg-primary30 p-5 my-5">
             <form action="">
-                <h1 class="font-bold text-4xl md:text-[5vw] xl:text-[3vw] capitalize text-primary10 text-center">type your email</h1>
-                    <div class="my-10">
-                        <input type="text" id="email" name="email" placeholder="email" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40 outline-none focus-within:border-primary10">
+                <h1 class="font-bold text-4xl md:text-[5vw] xl:text-[3vw] capitalize text-primary10 text-center">type your information</h1>
+                    <div class="my-5">
+                        <label for="fullName" class="block capitalize text-2xl font-bold text-primary50 mb-3">full name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="write your full name" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40 outline-none focus-within:border-primary10">
+                    </div>
+                    <div class="mb-5">
+                        <label for="fullName" class="block capitalize text-2xl font-bold text-primary50 mb-3">last name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="write your last name" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40 outline-none focus-within:border-primary10">
+                    </div>
+                    <div class="mb-5">
+                        <label for="Email" class="block capitalize text-2xl font-bold text-primary50 mb-3">enter your email</label>
+                        <input type="text" id="Email" name="Email" placeholder="write your Email" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40 outline-none focus-within:border-primary10">
+                    </div>
+                    <div class="mb-5">
+                        <label for="Country" class="block capitalize text-2xl font-bold text-primary50 mb-3">What country are you in?</label>
+                        <input type="Country" id="Country" name="Country" placeholder="write your country" class="p-2 w-full rounded-md border-2 border-primary40 placeholder:text-primary40 outline-none focus-within:border-primary10">
+                    </div>
+                    <div>
+                        <label for="you" class="block capitalize text-2xl font-bold text-primary50 mb-3">are you?</label>
+                        <div class="flex space-x-4 mb-2">
+                            <input type="radio" name="social" class="w-5 h-5">
+                            <label for="you">Social Enterpreneur</label>
+                        </div>
+                        <div class="flex space-x-4 mb-2">
+                            <input type="radio" name="social" class="w-5 h-5">
+                            <label for="you">Interested in</label>
+                        </div>
+                        <div class="flex space-x-4 mb-2">
+                            <input type="radio" name="social" class="w-5 h-5">
+                            <label for="you">Suporter</label>
+                        </div>
                     </div>
                     <div class="text-center mt-8 mb-6">
-                        <button class="py-2 px-5 bg-primary10 text-primary30 rounded-md">subscribe</button>
+                        <button class="p-2 bg-primary10 text-primary30 rounded-md">Subscribe</button>
                     </div>
             </form>
         </div>
     </main>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "YOUR_PUBLIC_KEY",
+      });
+   })();
+</script>
 </body>
 </html>

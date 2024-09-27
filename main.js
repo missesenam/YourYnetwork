@@ -26,3 +26,5 @@ function hidesidebar(){
     menuBar.classList.add('hidden')
     hamburgerbar.classList.remove('hidden')
 } 
+
+// email something
